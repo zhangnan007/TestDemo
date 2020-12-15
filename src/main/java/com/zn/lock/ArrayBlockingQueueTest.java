@@ -9,13 +9,14 @@ import java.util.concurrent.TimeUnit;
  * @date 2020/12/15 16:42
  */
 // 阻塞队列
-public class BlockingQueue {
+public class ArrayBlockingQueueTest {
     public static void main(String[] args) throws InterruptedException {
         test4();
     }
 
     // 第一种  add/remove  element 会抛出异常
     public static void test1() {
+
         ArrayBlockingQueue<Object> blockingQueue = new ArrayBlockingQueue<>(3);
         System.out.println(blockingQueue.add("a"));
         System.out.println(blockingQueue.add("b"));
@@ -65,7 +66,7 @@ public class BlockingQueue {
         System.out.println(blockingQueue.take()); // 多获取 会一直阻塞等待
     }
 
-    // 第四种 阻塞等待超时
+    // 第四种 offer poll 阻塞等待超时
     public static void test4() throws InterruptedException {
         ArrayBlockingQueue<Object> blockingQueue = new ArrayBlockingQueue<>(3);
         blockingQueue.offer("a");
