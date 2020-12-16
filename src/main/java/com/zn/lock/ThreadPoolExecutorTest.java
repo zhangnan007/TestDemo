@@ -32,7 +32,7 @@ public class ThreadPoolExecutorTest {
                 new ThreadPoolExecutor.AbortPolicy());
         // 执行
         try {
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < 9; i++) {
                 threadPool.execute(() -> {
                     System.out.println(Thread.currentThread().getName() + " ->exe");
                 });
