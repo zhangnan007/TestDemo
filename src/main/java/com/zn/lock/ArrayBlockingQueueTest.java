@@ -16,7 +16,6 @@ public class ArrayBlockingQueueTest {
 
     // 第一种  add/remove  element 会抛出异常
     public static void test1() {
-
         ArrayBlockingQueue<Object> blockingQueue = new ArrayBlockingQueue<>(3);
         System.out.println(blockingQueue.add("a"));
         System.out.println(blockingQueue.add("b"));
